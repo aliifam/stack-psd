@@ -55,13 +55,17 @@ main()
 
 
 """
-untuk membalik angka maka gunakan stack,
-dengan konsepnya yang LIFO maka bisa dilakukan
-push data -> peek data -> pop data, terus menerus
-hingga data pada stack kosong,
+untuk membalik angka maka gunakan stack karena
+dengan konsepnya yang LIFO maka bisa dilakukan :
+
+push data -> peek data -> pop data
+
+terus menerus hingga data pada stack kosong,
 kali ini method yang digunakan :
 
 - addhead = push
 - removehead = pop
 - peekhead = peek
+
+lalu diakali dengan dilakukan for loop pada prosesnya
 """
