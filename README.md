@@ -1,4 +1,4 @@
-# Tugas Stack
+# Tugas PSD
 
 1. Membalik linkedlist dengan mengimplementasikan stack dan methodnya
 
