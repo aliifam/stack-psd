@@ -41,41 +41,4 @@ def func_test(numbers_list):
     for j in range(len(numbers_list)):
         reversed_numbers.append(stacked_list.peekData())
         stacked_list.popData()
-        
-
-def main():
-
-    list_angka = input().split(" ")
-    list_angka = list(map(int, list_angka))
-    panjang = len(list_angka)
-
-
-    ll = linkstack()
-
-    for i in list_angka:
-        ll.pushData(i)
-
-    for i in range(panjang):
-        print(ll.peekData(), end=" ")
-        ll.popData()
-
-main()
-
-
-
-
-"""
-untuk membalik angka maka gunakan stack karena
-dengan konsepnya yang LIFO maka bisa dilakukan :
-
-push data -> peek data -> pop data
-
-terus menerus hingga data pada stack kosong,
-kali ini method yang digunakan :
-
-- addhead = push
-- removehead = pop
-- peekhead = peek
-
-lalu diakali dengan dilakukan for loop pada prosesnya
-"""
+    return reversed_numbers
