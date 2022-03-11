@@ -4,20 +4,20 @@ class Node():
         self.next = None
 
 class linkstack():
-    def __init__(self):
+    def __init__(self): #constructor
         self.head = None
         self.tail = None
     
-    def addHead(self, data):
+    def pushData(self, data): #truelly it's = addHead
         newdata = Node(data)
         if self.head == None:
             self.head = newdata
-            self.head = newdata
+            self.tail = newdata
         else:
             newdata.next = self.head
-            head = newdata
+            self.head = newdata
     
-    def removeHead(self):
+    def popData(self): #truelly it's = removeHead
         if self.head == None:
             print("error stack sudah kosong")
         elif self.head.next == None:
@@ -26,7 +26,7 @@ class linkstack():
         else:
             self.head = self.head.next
     
-    def peekHead(self):
+    def peekData(self): #truelly it's = peekHead
         if self.head == None:
             return "error stack sudah kosong"
         else:
@@ -34,13 +34,25 @@ class linkstack():
     
 
 def main():
-    linkedlist = LL()
 
-    for i in range(9):
-        linkedlist.addTail(i)
-    
+    list_angka = input().split(" ")
+    list_angka = list(map(int, list_angka))
+    panjang = len(list_angka)
+
+
+    ll = linkstack()
+
+    for i in list_angka:
+        ll.pushData(i)
+
+    for i in range(panjang):
+        print(ll.peekData(), end=" ")
+        ll.popData()
 
 main()
+
+
+
 
 """
 untuk membalik angka maka gunakan stack,
